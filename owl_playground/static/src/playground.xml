@@ -5,6 +5,17 @@
         <div class="p-3">
             hello world
         </div>
+        <Counter/>
+        <Card>
+            <t t-set-slot="title">Card title new</t>
+            <p class="card-text">Inner text of card</p>
+            <a href="#" class="btn btn-primary">Go to home please</a>
+        </Card>
+        <TodoList todos="state.todos"
+                  addTodoCallback.bind="addTodo"
+                  toggleTodoCallback.bind="toggleTodo"
+                  removeTodoCallback.bind="removeTodo"
+        />
     </t>
 
 </templates>

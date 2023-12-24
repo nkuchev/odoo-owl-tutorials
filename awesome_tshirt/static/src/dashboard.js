@@ -1,6 +1,6 @@
 /** @odoo-module **/
 
-import { Component, useSubEnv, onWillStart } from "@odoo/owl";
+import { Component, useSubEnv, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { getDefaultConfig } from "@web/views/view";
 import { useService } from "@web/core/utils/hooks";
@@ -28,9 +28,7 @@ class AwesomeDashboard extends Component {
                 ...this.env.config,
             },
         });
-        onWillStart(async () => {
-            this.statistics = await this.clientService.loadStatistics();
-        });
+        this.statistics = useState(this.clientService.statistics);
         this.display = {
             controlPanel: { "top-right": false, "bottom-right": false },
         };

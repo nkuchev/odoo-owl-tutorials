@@ -2,7 +2,7 @@
 
 import { registry } from "@web/core/registry";
 
-import { Component, onWillStart } from "@odoo/owl";
+import { Component, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 
@@ -10,9 +10,7 @@ export class OrderTray extends Component {
     setup() {
         this.action = useService("action");
         this.clientService = useService("awesome_tshirt.statistics");
-        onWillStart(async () => {
-            this.statistics = await this.clientService.loadStatistics();
-        });
+        this.statistics = useState(this.clientService.statistics);
     }
     onClick() {
         this.action.doAction({

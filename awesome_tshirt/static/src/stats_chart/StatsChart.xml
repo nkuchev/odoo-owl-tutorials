@@ -1,0 +1,5 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_tshirt.StatsChart" owl="1">
+        <canvas t-ref="stats-canvas"/>
+    </t>
+</templates>

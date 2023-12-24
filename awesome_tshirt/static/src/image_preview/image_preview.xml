@@ -1,0 +1,7 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_tshirt.ImagePreview" owl="1">
+        <CharField t-if="!props.readonly" t-props="props"/>
+        <span t-if="props.value.length === 0" class="text-danger">MISSING TSHIRT DESIGN</span>
+        <img t-att-src="props.value"/>
+    </t>
+</templates>

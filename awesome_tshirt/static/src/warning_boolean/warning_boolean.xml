@@ -1,0 +1,6 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_tshirt.WarningBooleanField" owl="1">
+        <BooleanField t-props="props"/>
+        <span t-if="props.value" class="text-danger">Late!</span>
+    </t>
+</templates>

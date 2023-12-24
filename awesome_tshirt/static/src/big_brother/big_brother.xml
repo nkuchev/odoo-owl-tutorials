@@ -1,0 +1,9 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_tshirt.BigBrother" t-inherit="web.Breadcrumbs" t-inherit-mode="extension" owl="1">
+        <xpath expr="//ol[hasclass('breadcrumb')]" position="inside">
+            <li class="ml-2 text-danger">
+                <i t-on-click="onClickBigBrother" class="fa fa-eye blink"/>
+            </li>
+        </xpath>
+    </t>
+</templates>

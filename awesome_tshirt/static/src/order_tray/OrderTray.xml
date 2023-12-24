@@ -1,0 +1,9 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_tshirt.OrderTray" owl="1">
+        <div t-if="this.statistics" class="dropdown" t-ref="root">
+            <a class="dropdown-toggle o-no-caret o-dropdown--narrow" title="Orders" href="#" role="button" t-on-click="onClick">
+                <i class="fa fa-shopping-basket" role="img" aria-label="Orders"/> <span t-if="this.statistics.nb_new_orders > 0" class="badge" t-esc="this.statistics.nb_new_orders"/>
+            </a>
+        </div>
+    </t>
+</templates>
